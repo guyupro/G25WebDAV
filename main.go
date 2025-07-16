@@ -45,7 +45,7 @@ func loadConfig() (*Config, error) {
 		if err := createDefaultConfigFile(); err != nil {
 			return nil, err
 		}
-		fmt.Println("首次启动，已生成默认配置文件 config.ini，请修改后重启。")
+		fmt.Println("首次启动，已生成默认配置文件 config.ini，请修改后再次启动。")
 		os.Exit(0)
 	}
 	iniCfg, err := ini.Load(configFile)
